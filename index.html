@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lesson 1. HTML/CSS Course</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./lesson3.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --color-key: #b20600;
+        }
+    </style>
+</head>
+<body class="shower list grid">
+<header class="caption">
+    <h1>Лекция 1</h1>
+</header>
+
+<section class="slide">
+    <h2 class="shout">Лекция 1</h2>
+</section>
+
+<section class="slide">
+    <h2>Что уже должны знать?</h2>
+</section>
+
+<section class="slide">
+    <h2>Селекторы</h2>
+    <div class="content">
+        <ul>
+            <li>Универсальный селектор <mark class="item secondary">*</mark></li>
+            <li>Селектор элемента <mark class="item secondary">div</mark></li>
+            <li>Селектор класса <mark class="item secondary">.box</mark></li>
+            <li>Селектор идентификатора <mark class="item secondary">#footer</mark></li>
+            <li>Селектор по атрибуту <mark class="item secondary">[attr]</mark> <mark class="item secondary">[attr=value]</mark> <mark class="item secondary">[attr~=value]</mark> <mark class="item secondary">[attr|=value]</mark> <mark class="item secondary">[attr^=value]</mark> <mark class="item secondary">[attr$=value]</mark> <mark class="item secondary">[attr*=value]</mark></li>
+            <li>Селектор псевдокласса <mark class="item secondary">:hover</mark>, <mark class="item secondary">:active</mark>, <i>etc</i></li>
+            <li>Селектор псевдоэлемента <mark class="item secondary">:before</mark>, <mark class="item secondary">:after</mark>, <i>etc</i></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Комбинаторы</h2>
+    <div class="content">
+        <ul>
+            <li>Запятая <mark class="item secondary">div, span</mark></li>
+            <li>Потомки <mark class="item secondary">section h2</mark></li>
+            <li>Дочерние селекторы <mark class="item secondary">.header > .item</mark></li>
+            <li>Ближайшие соседние элементы <mark class="item secondary">li + ul</mark></li>
+            <li>Последующие элементы <mark class="item secondary">p ~ span</mark></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Каскад</h2>
+    <div class="content">
+        <ul>
+            <li>Специфичность</li>
+            <li>Стили браузера</li>
+            <li>Наследование</li>
+            <li>Порядок следования стилей</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Модель визуального форматирования</h2>
+    <div class="content">
+        <ul>
+            <li><mark class="secondary">Боксовая модель CSS</mark></li>
+            <li><mark class="secondary">Box-sizing</mark></li>
+            <li>
+                <mark class="secondary"
+                >Свойство display (inline, inline-block, block)</mark
+                >
+            </li>
+            <li class="next"><mark class="secondary">Позиционирование</mark></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Единицы измерения</h2>
+    <div class="content">
+        <ul>
+            <li><mark class="secondary">Абсолютные (px)</mark></li>
+            <li><mark class="secondary">Относительные (em, rem, %, vw, vh)</mark></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Сегодня</h2>
+</section>
+
+<section class="slide">
+    <ul>
+        <li><mark class="secondary">Сброс стилей</mark></li>
+        <li class="next"><mark class="secondary">Системы организации кода (БЭМ)</mark></li>
+        <li class="next">
+            <mark class="secondary">Семантическая верстка</mark>
+        </li>
+        <li class="next"><mark class="secondary">CSS-переменные</mark></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Сброс стилей</h2>
+</section>
+
+<section class="slide">
+    <h2>Reset, normalize</h2>
+    <p>Нужны для сброса браузерных стилей до общего состояния.</p>
+    <p>
+        <mark class="important">Reset</mark> - это не конкретный файл, а набор
+        правил. Можно составить самому или взять из open source. Подход
+        предложил Эрик Мейер - его
+        <a href="https://meyerweb.com/eric/tools/css/reset/">reset.css</a>.
+    </p>
+    <p>
+        <mark class="important">Normalize</mark> - современная альтернатива.
+        Подход предложил Николас Галлахер. Нормализовать стили — значит убрать
+        различия отображения в разных браузерах, а не "обнулить" до отправной
+        точки как в случае с reset.css. Живет
+        <a href="https://github.com/necolas/normalize.css/">тут</a>.
+    </p>
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода</h2>
+</section>
+
+<section class="slide">
+    <img class="image_full_screen image" src="./pictures/vk.png">
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода</h2>
+    <div class="content">
+        <ul>
+            <li>БЭМ</li>
+            <li>
+                <a href="https://habr.com/ru/post/256109" target="_blank"
+                >Статья на хабре про системы организации кода</a
+                >
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <div class="content">
+        <mark class="important">Блок</mark>
+        <mark class="important">Элемент</mark>
+        <mark class="important">Модификатор</mark>
+
+        <p>
+            Компонентный подход к веб-разработке. <br />Позволяет писать
+            переиспользуемый css, в основе - разделение на блоки.
+        </p>
+
+        <!-- Придуман в яндексе, де-факто стандарт -->
+    </div>
+</section>
+
+<section class="slide">
+    <div class="content">
+        <h2>Системы организации кода. БЭМ</h2>
+        <p><mark class="bem important">Блок</mark> - функционально независимый компонент страницы, который может быть повторно использован.</p>
+        <ul>
+            <li>Не надо задавать внешние отступы и положение</li>
+            <li>Можно вкладывать друг в друга</li>
+        </ul>
+        <p>
+            <mark class="secondary item">.menu</mark>
+            <mark class="secondary item">.header</mark>
+            <mark class="secondary item">.footer</mark>
+            <mark class="secondary item">.bell</mark>
+            <mark class="secondary item">.card</mark>
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <div class="content">
+        <p><mark class="bem important">Элемент</mark> - составная часть блока, которая не может использоваться без него.</p>
+        <ul>
+            <li>Всегда часть блока, а не другого элемента</li>
+            <li>Можно вкладывать друг в друга</li>
+        </ul>
+        <p>
+            <mark class="secondary item">.menu__item</mark>
+            <mark class="secondary item">.header__copyright</mark>
+            <mark class="secondary item">.footer__row</mark>
+            <mark class="secondary item">.bell__mark</mark>
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <div class="content">
+        <p><mark class="bem important">Модификатор</mark> - внешний вид, состояние или поведение блока либо элемента.</p>
+        <ul>
+            <li>Нельзя использовать самостоятельно, только с модифицируемым блоком или элементом</li>
+        </ul>
+        <p>
+            <mark class="secondary item">.menu_disabled</mark>
+            <mark class="secondary item">.footer__row_direction-top</mark>
+            <mark class="secondary item">.card_size-single</mark>
+        </p>
+    </div>
+</section>
+
+<section class="slide slide_display_flex">
+    <h2>Системы организации кода. БЭМ</h2>
+    <img
+      class="image_full_width image_centered"
+      src="./pictures/1.bem_illustration.png"
+    />
+</section>
+
+<section class="slide slide_display_flex">
+    <h2>Системы организации кода. БЭМ</h2>
+    <img
+      class="image_full_width image_centered"
+      src="./pictures/2.bem_illustration.png"
+    />
+    <!-- Спросить как бы они назвали блоки, элементы и модификаторы -->
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <img
+      class="image_centered image_full_width"
+      src="./pictures/3.bem_illustration.png"
+    />
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <h3 style="margin: 0">Как "миксовать" блоки (например, выравнивать по сетке)?</h3>
+    <div class="content">
+        <ul>
+            <li class="next"><mark class="secondary">Блоки всегда встраиваются в другие блоки</mark></li>
+            <li class="next"><mark class="secondary">Внешнее поведение дочерних блоков всегда определяется родителем</mark></li>
+            <li class="next"><mark class="secondary">
+                Поэтому можно использовать элемент родительского блока рядом с классом блока,
+                которому нужно задать определенное поведение (выравнивание в общей сетке и пр.)
+            </mark></li>
+        </ul>
+    </div>
+
+    <!-- В курсовом проекте есть компоненты, которые встраиваются в другие компоненты, например в карточки -->
+</section>
+
+<section class="slide">
+    <h2>Системы организации кода. БЭМ</h2>
+    <h3 style="margin: 0">Другие возможности/недостатки</h3>
+    <p>...</p>
+</section>
+
+<!--    <section class="slide">-->
+<!--      <h2>Преимущества и недостатки БЭМ</h2>-->
+<!--      <h3 style="margin: 0">Преимущества</h3>-->
+<!--      <div class="content">-->
+<!--        <ul>-->
+<!--          <li><mark class="secondary">инкапсуляция или изоляция стилей пространством имени блока (namespace)</mark></li>-->
+<!--          <li><mark class="secondary">повторное использование верстки</mark></li>-->
+<!--          <li><mark class="secondary">можно безболезненно менять верстку блоков местами в одном проекте</mark></li>-->
+<!--          <li><mark class="secondary">переносить готовую верстку из проекта в проект</mark></li>-->
+<!--          <li><mark class="secondary">создавать стабильный, предсказуемый и понятный код</mark></li>-->
+<!--          <li><mark class="secondary">сократить время на отладку проекта</mark></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </section>-->
+
+<!--    <section class="slide">-->
+<!--      <h2>Преимущества и недостатки БЭМ</h2>-->
+<!--      <h3 style="margin: 0">Недостатки</h3>-->
+<!--      <div class="content">-->
+<!--        <ul>-->
+<!--          <li><mark class="secondary">проблема “внучатых” элементов (.block__element__element)</mark></li>-->
+<!--          <li><mark class="secondary">проблема использования wrapper-блоков (например, 3-колоночная сетка карточек)</mark></li>-->
+<!--          <li><mark class="secondary">проблема управления общими состояниями (.active, .open и пр.)</mark></li>-->
+<!--          <li><mark class="secondary">длинные классы в html</mark></li>-->
+<!--          <li><mark class="secondary">другие</mark></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </section>-->
+
+<section class="slide">
+    <h2 class="shout">Семантическая верстка</h2>
+</section>
+
+<!--<section class="slide">-->
+<!--    <h2>Семантическая верстка</h2>-->
+<!--    <p><i>more semantic = more meaningful</i></p>-->
+<!--    <ul>-->
+<!--        <li>Чистота кода</li>-->
+<!--        <li>Доступность</li>-->
+<!--        <li>-->
+<!--            Распознавание поисковыми движками. Стандарт-->
+<!--            <a href="https://microformats.org/wiki/hreview" target="_blank"-->
+<!--            >hreview</a-->
+<!--            >-->
+<!--            и <a href="https://ogp.me/" target="_blank">opengraph</a>.-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <p>-->
+<!--        Структура сайта и смысл каждого объекта должен быть понятен прямо из-->
+<!--        исходного кода.-->
+<!--    </p>-->
+<!--</section>-->
+
+<!--<section class="slide">-->
+<!--    <h2>Семантическая верстка. Доступность</h2>-->
+<!--    <h3 style="margin: 0">Плохо</h3>-->
+<!--    <pre style="margin-bottom: 0">-->
+<!--        <code style="white-space: nowrap">-->
+<!--          <span class="punctuation">&lt;</span><span class="property">div</span> id<span class="punctuation">="</span><span class="rule">nav</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--    <pre>-->
+<!--        <code style="white-space: nowrap">-->
+<!--          <span class="punctuation">&lt;</span><span class="property">div</span> id<span class="punctuation">="</span><span class="rule">button</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--    <h3 style="margin: 0">Хорошо</h3>-->
+<!--    <pre style="margin-bottom: 0">-->
+<!--        <code style="white-space: nowrap">-->
+<!--          <span class="punctuation">&lt;</span><span class="property">nav</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">nav</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--    <pre>-->
+<!--        <code style="white-space: nowrap">-->
+<!--          <span class="punctuation">&lt;</span><span class="property">button</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">button</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--</section>-->
+
+<!--<section class="slide">-->
+<!--    <h2>Семантическая верстка. Доступность</h2>-->
+<!--    <h3 style="margin: 0">Плохо</h3>-->
+<!--    <pre style="margin-bottom: 0; margin-top: -40px">-->
+<!--        <code>-->
+<!--          <span class="punctuation">&lt;</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--          <span class="punctuation" style="padding-left: 40px"></span>Укажите ваше имя:-->
+<!--          <span class="punctuation" style="padding-left: 40px">&lt;</span><span class="property">input</span> id<span class="punctuation">="</span><span class="rule">name</span><span class="punctuation">"</span> name<span class="punctuation">="</span><span class="rule">name</span><span class="punctuation">"</span> type<span class="punctuation">="</span><span class="rule">text</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--          <span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--    <h3 style="margin: 0; margin-top: -20px">Хорошо</h3>-->
+<!--    <pre style="margin-bottom: 0; margin-top: -40px">-->
+<!--        <code>-->
+<!--          <span class="punctuation">&lt;</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--          <span class="punctuation" style="padding-left: 40px">&lt;</span><span class="property">label</span> for<span class="punctuation">="</span><span class="rule">name</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>Укажите ваше имя:<span class="punctuation">&lt;/</span><span class="property">label</span><span class="punctuation">&gt;</span>-->
+<!--          <span class="punctuation" style="padding-left: 40px">&lt;</span><span class="property">input</span> id<span class="punctuation">="</span><span class="rule">name</span><span class="punctuation">"</span> name<span class="punctuation">="</span><span class="rule">name</span><span class="punctuation">"</span> type<span class="punctuation">="</span><span class="rule">text</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--          <span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--        </code>-->
+<!--      </pre>-->
+<!--</section>-->
+
+<!--<section class="slide">-->
+<!--    <h2>Семантическая верстка. Классы</h2>-->
+<!--    <pre>-->
+<!--            <code>-->
+<!--                <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">tooltip</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">can-hide-helper</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">small-sign-question</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--                <span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--            </code>-->
+<!--        </pre>-->
+<!--    <pre>-->
+<!--            <code>-->
+<!--                <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">tooltip</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">tooltip__help</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">tooltip__question</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--                <span class="punctuation">&lt;</span><span class="property">div</span><span class="punctuation">/&gt;</span>-->
+<!--            </code>-->
+<!--        </pre>-->
+<!--</section>-->
+
+<!--<section class="slide">-->
+<!--    <h2>Семантическая верстка. Теги</h2>-->
+<!--    <pre>-->
+<!--            <code>-->
+<!--                <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">list</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">list__item</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                <span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span>-->
+<!--            </code>-->
+<!--        </pre>-->
+<!--    <pre>-->
+<!--            <code>-->
+<!--                <span class="punctuation">&lt;</span><span class="property">ul</span> class<span class="punctuation">="</span><span class="rule">list</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                    <span class="punctuation">&lt;</span><span class="property">li</span> class<span class="punctuation">="</span><span class="rule">list__item</span><span class="punctuation">"</span><span class="punctuation">&gt;</span>-->
+<!--                <span class="punctuation">&lt;/</span><span class="property">ul</span><span class="punctuation">&gt;</span>-->
+<!--            </code>-->
+<!--        </pre>-->
+<!--</section>-->
+
+<section class="slide">
+    <h2>Семантическая верстка. Details & Summary</h2>
+</section>
+
+<section class="slide">
+    <h2>Семантическая верстка. Details & Summary</h2>
+    <p>Используется для раскрытия дополнительной информации</p>
+    <div class="columns two">
+        <div>
+          <pre>
+              <code><span class="punctuation">&lt;</span><span class="property">details</span><span class="punctuation">&gt;</span></code>
+              <code><span class="punctuation">  &lt;</span><span class="property">summary</span><span class="punctuation">&gt;</span><span>Лицензионное соглашение</span><span class="punctuation">&lt;/</span><span class="property">summary</span><span class="punctuation">&gt;</span></code>
+              <code>    blah blah blah</code>
+              <code><span class="punctuation">&lt;/</span><span class="property">details</span><span class="punctuation">&gt;</span></code>
+          </pre>
+            <div>
+                <details>
+                    <summary>
+                        <span class="marker">➤</span> Лицензионное соглашение
+                    </summary>
+                    blah blah blah
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Семантическая верстка. Details & Summary</h2>
+    <div>
+        <small>
+          <pre>
+              <code><span class="rule">summary</span><span class="punctuation"> {</span></code>
+              <code>  <span class="variable">display</span><span class="punctuation">:</span> block<span class="punctuation">;</span><span class="punctuation">  // Для Firefox</span></code>
+              <code><span class="punctuation">}</span></code>
+              <code><span class="rule">summary::-webkit-details-marker</span><span class="punctuation"> {</span></code>
+              <code>  <span class="variable">display</span><span class="punctuation">:</span> none<span class="punctuation">;</span><span class="punctuation">  // Для Webkit и Safari</span></code>
+              <code><span class="punctuation">}</span></code>
+              <code><span class="rule">summary .marker</span> <span class="punctuation">{</span></code>
+              <code>  <span class="variable">display</span><span class="punctuation">:</span> inline-block<span class="punctuation">;</span></code>
+              <code>  <span class="variable">padding-right</span><span class="punctuation">:</span> 0.5em<span class="punctuation">;</span></code>
+              <code><span class="punctuation">}</span></code>
+              <code><span class="rule">details[open] .marker</span> <span class="punctuation">{</span></code>
+              <code>  <span class="variable">transform</span><span class="punctuation">:</span> rotate(90deg)<span class="punctuation">;</span></code>
+              <code><span class="punctuation">}</span></code>
+          </pre>
+        </small>
+    </div>
+</section>
+
+<section class="slide vk">
+    <img class="image_full_screen image" src="./pictures/vk.png">
+</section>
+
+<section class="slide">
+    <h2 class="shout">Разбираем главную страницу</h2>
+</section>
+
+<section class="slide">
+    <h2>Основное правило верстки</h2>
+    <h3>- Верстаем сверху вниз, снаружи вовнутрь!</h3>
+</section>
+
+<section class="slide">
+    <h2>Разбираем главную страницу</h2>
+    <p>
+        <a
+          href="https://course-htmlcss.javascript.ru/index.html"
+          target="_blank"
+        >https://course-htmlcss.javascript.ru/index.html</a
+        >
+    </p>
+</section>
+
+<section class="slide">
+    <h2 class="shout">CSS-переменные</h2>
+</section>
+
+<section class="slide">
+    <h2>CSS-переменные</h2>
+    <p>
+        Имена свойств с префиксом <mark class="secondary item">--</mark>,
+        например <mark class="secondary item">--important-property</mark>.
+        Свойства затем можно использовать в документе с помощью функции
+        <mark class="secondary">var()</mark>.
+    </p>
+
+    <div class="content variables">
+        <pre>
+                <code><span class="rule">:root</span> <span class="punctuation">{</span></code>
+                <code>  <span class="variable">--primary-color</span><span class="punctuation">:</span> red<span class="punctuation">;</span><span class="punctuation">  // Определение</span></code>
+                <code><span class="punctuation">}</span></code>
+            </pre>
+
+        <pre>
+                <code><span class="rule">.block</span> <span class="punctuation">{</span></code>
+                <code><span class="property">  color</span><span class="punctuation">:</span> var(<span class="variable">--primary-color</span>, red)<span class="punctuation">;</span><span class="punctuation">  // Использование</span></code>
+                <code><span class="punctuation">}</span></code>
+            </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>CSS-переменные. Переопределение</h2>
+    <div class="content variables">
+        <div class="columns two">
+            <div>
+            <pre>
+                        <code><span class="rule">.one </span><span class="punctuation">{</span></code>
+                        <code><span class="variable">  --text-color</span><span class="punctuation">:</span> blue<span class="punctuation">;</span></code>
+                        <code><span class="rule"></span><span class="punctuation">}</span></code>
+                        <code><span class="rule">.two </span><span class="punctuation">{</span></code>
+                        <code><span class="variable">  --text-color</span><span class="punctuation">:</span> red<span class="punctuation">;</span></code>
+                        <code><span class="property">  color</span><span class="punctuation">:</span> var(<span class="variable">--text-color</span>)<span class="punctuation">;</span></code>
+                        <code><span class="rule"></span><span class="punctuation">}</span></code>
+                    </pre>
+            </div>
+            <div>
+            <pre>
+                        <code><span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">one</span><span class="punctuation">"</span><span class="punctuation">&gt;</span></code>
+                        <code>  <span class="punctuation">&lt;</span><span class="property">div</span> class<span class="punctuation">="</span><span class="rule">two</span><span class="punctuation">"</span><span class="punctuation">&gt;</span></code>
+                        <code>    Какого цвета текст?</code>
+                        <code>  <span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span></code>
+                        <code><span class="punctuation">&lt;/</span><span class="property">div</span><span class="punctuation">&gt;</span></code>
+                    </pre>
+
+                <div class="example next">
+              <pre>
+                            <div class="one">
+                                <div class="two">
+                                    Какого цвета текст?
+                                </div>
+                            </div>
+                        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="slide">
+<h2>Лучшие практики написания стилей</h2>
+<p>
+    <ul>
+        <li>Снижайте сложность селекторов</li>
+        <li>Используйте методологию, основанную на классах (например БЭМ)</li>
+        <li>Сокращайте количество стилизованных элементов</li>
+    </ul>
+
+    <div class="columns two">
+        <pre>
+            <code><span class="rule">div<span class="punctuation">:</span>nth-last-child<span class="punctuation">(</span>2n<span class="punctuation">)</span> <span class="punctuation">></span> li <span class="punctuation">{</span></code>
+            <code><span class="property">    // плохо</code>
+            <code><span class="punctuation">}</span></code>
+        </pre>
+
+        <pre>
+            <code><span class="rule">.title</span> <span class="punctuation">{</span></code>
+            <code><span class="property">    // хорошо</code>
+            <code><span class="punctuation">}</span></code>
+        </pre>
+    </div>
+</p>
+</section> -->
+
+<!-- <section class="slide">
+<h2 class="shout">Практика</h2>
+</section> -->
+
+<section class="slide">
+    <h2>
+        Материалы для закрепления и более продвинутого изучения пройденных тем
+    </h2>
+    <ul>
+        <li>
+            <a href="https://habr.com/ru/post/256109/">
+                Способы организации CSS кода
+            </a>
+        </li>
+        <li>
+            <a href="https://habr.com/ru/company/htmlacademy/blog/546500/">
+                Статья о семантической верстке
+            </a>
+        </li>
+    </ul>
+    Интересно, но - опционально:
+    <ul>
+        <li>
+            <a
+              href="https://css-live.ru/css/nikto-ne-znaet-css-specifichnost-ne-kaskad.html"
+            >
+                "Никто не знает CSS", или "специфичность не каскад" (*продвинутый
+                уровень, статья к которой можно возврашаться по мере изучения CSS)
+            </a>
+        </li>
+        <li>
+            <a href="https://habr.com/ru/post/477520/"
+            >Верстка разнообразных компонентов с использованием details +
+                summary</a
+            >
+        </li>
+    </ul>
+</section>
+
+<div class="progress"></div>
+
+<script src="./shower.js"></script>
+<script src="./lesson.js"></script>
+</body>
+</html>
